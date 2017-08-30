@@ -5,9 +5,7 @@ import { TemplateService } from './template.service';
     selector: '[substitute]'
 })
 export class SubstituteDirective {
-    templateKey
-    templateData
-
+  
     @Input() set substitute(params) {
         this.view.createEmbeddedView(this.templateService.templates.get(params.templateKey), params.templateData);
     }
